@@ -1,219 +1,422 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e94f83">
-<title>Makeup Artists Deserve Respect</title>
-<style>
-:root{--pink:#e94f83;--dark:#c92f67;--ink:#171317;--paper:#fff9f7;--muted:#766b72;--line:#f0dce4}
-*{box-sizing:border-box}
-body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 8% 5%,#e94f8320,transparent 35%),var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-.wrap{width:min(1050px,calc(100% - 32px));margin:auto}
-header{padding:22px 0;font-weight:900;letter-spacing:2px;font-size:14px}
-header span,h1 span{color:var(--dark)}
-.hero{text-align:center;padding:55px 0 40px}
-.tag{display:inline-block;background:#ffeaf1;border:1px solid #f2bdd0;border-radius:30px;padding:7px 15px;color:var(--dark);font-weight:bold;font-size:12px;letter-spacing:2px}
-h1{font-size:clamp(40px,8vw,82px);line-height:1;letter-spacing:-3px;margin:22px 0}
-.intro{max-width:650px;margin:auto;color:var(--muted);font-size:17px}
-.banner{margin:30px auto 0;padding:18px;background:var(--ink);color:white;border-radius:15px;font-weight:bold;max-width:700px}
-.banner span{color:#ff8db4}
-main{display:grid;grid-template-columns:1fr .9fr;gap:24px;padding:20px 0 65px;align-items:start}
-.card{background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,32px);box-shadow:0 15px 40px #4b162b0b}
-h2{font-size:24px;margin:0 0 5px;letter-spacing:-.5px}
-.sub{color:var(--muted);margin:0 0 22px}
-label{display:block;font-size:14px;font-weight:bold;margin:16px 0 7px}
-input,textarea{width:100%;padding:13px;border:1px solid #e8d6de;border-radius:11px;font:inherit;background:#fffdfd;outline:none}
-input:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px #e94f8320}
-textarea{min-height:95px;resize:vertical}
-.consent{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:13px;margin:18px 0}
-.consent input{width:auto;margin-top:5px;accent-color:var(--dark)}
-button{width:100%;padding:15px;border:0;border-radius:11px;background:var(--dark);color:white;font-size:16px;font-weight:bold;cursor:pointer}
-button:hover{background:#ad2055}
-button:disabled{opacity:.6;cursor:wait}
-#notice{font-size:14px;min-height:24px;margin-bottom:0;overflow-wrap:anywhere}
-.countbox{background:#fff0f5;padding:22px;border-radius:15px;margin-bottom:25px}
-.count{font-size:58px;line-height:1;font-weight:900;letter-spacing:-3px;color:var(--dark)}
-.countlabel{color:var(--muted);font-weight:bold;margin-top:8px}
-ul{list-style:none;padding:0}
-li{margin:15px 0;color:#51464d}
-.tick{color:var(--dark);font-weight:bold;margin-right:9px}
-.quote{border-left:4px solid var(--pink);padding:3px 0 3px 15px;margin:25px 0;font-weight:bold}
-.signature{padding:13px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
-.signature:last-child{border-bottom:0}
-.signature strong{display:block}
-.signature small{color:var(--muted)}
-.empty{color:var(--muted);font-size:14px}
-footer{text-align:center;padding:25px 0 35px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-@media(max-width:720px){.hero{padding-top:35px}main{grid-template-columns:1fr}.intro{font-size:15px}h1{letter-spacing:-2px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7e8ee">
+  <title>Makeup Artists Deserve Respect</title>
+  <meta name="description" content="A petition calling for makeup artists to receive the respect and recognition they deserve.">
+  <style>
+    :root {
+      --pink: #e7a9bf;
+      --pink-light: #fff4f8;
+      --pink-dark: #a63c65;
+      --text: #30232a;
+      --muted: #786771;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--pink-light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 65px 20px 55px;
+      background: linear-gradient(135deg, #f5d4e0, #fbeaf0);
+      border-bottom: 1px solid #edcfda;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--pink-dark);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 16px auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    header p {
+      max-width: 610px;
+      margin: 20px auto 0;
+      color: #634c58;
+      font-size: 17px;
+    }
+
+    main {
+      width: min(1050px, calc(100% - 32px));
+      margin: 40px auto 70px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+
+    .stat, .panel {
+      background: var(--white);
+      border: 1px solid #efdce4;
+      border-radius: 18px;
+      box-shadow: 0 8px 28px #7a38500a;
+    }
+
+    .stat {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 36px;
+      color: var(--pink-dark);
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .panel { padding: 28px; }
+
+    h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .intro { color: var(--muted); }
+
+    label {
+      display: block;
+      margin: 17px 0 7px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #e4ccd6;
+      border-radius: 10px;
+      background: #fffafd;
+      color: var(--text);
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--pink-dark);
+      box-shadow: 0 0 0 3px #a63c6518;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 18px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 18px;
+      background: var(--pink-dark);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity .2s, transform .2s;
+    }
+
+    button:hover { opacity: .9; transform: translateY(-1px); }
+    button:disabled { opacity: .6; cursor: wait; transform: none; }
+
+    #formStatus {
+      min-height: 24px;
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
+
+    .signature-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .signature {
+      padding: 15px;
+      border: 1px solid #f0dfe6;
+      border-radius: 12px;
+      background: #fffafd;
+      overflow-wrap: anywhere;
+    }
+
+    .signature strong { color: var(--pink-dark); }
+    .signature p { margin: 6px 0; white-space: pre-wrap; }
+    .signature time { color: var(--muted); font-size: 12px; }
+
+    .empty, .small-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 25px 16px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #edcfda;
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .content { grid-template-columns: 1fr; }
+      .panel { padding: 22px; }
+      header { padding: 50px 20px 42px; }
+    }
+  </style>
 </head>
 <body>
-<header class="wrap">BEAUTY WITH <span>RESPECT</span></header>
+  <header>
+    <div class="eyebrow">A petition for respect and recognition</div>
+    <h1>Makeup Artists Deserve Respect</h1>
+    <p>Makeup artistry takes skill, creativity, time and dedication. It's time to recognise the work, professionalism and value of makeup artists.</p>
+  </header>
 
-<section class="hero wrap">
-  <div class="tag">THE PETITION</div>
-  <h1>MAKEUP ARTISTS<br><span>DESERVE RESPECT.</span></h1>
-  <p class="intro">Makeup artistry is a skill, a craft and a form of self-expression. It takes practice, creativity, time and dedication. It's time to stop treating makeup artists like their work doesn't matter.</p>
-  <div class="banner">RESPECT THEIR <span>SKILLS</span> · THEIR <span>TIME</span> · THEIR <span>PASSION</span></div>
-</section>
+  <main>
+    <section class="stats" aria-label="Petition statistics">
+      <div class="stat">
+        <strong id="signatureCount">—</strong>
+        <span>People who have signed</span>
+      </div>
+      <div class="stat">
+        <strong>One voice</strong>
+        <span>Can help make a difference</span>
+      </div>
+    </section>
 
-<main class="wrap">
-  <section class="card">
-    <h2>Add your signature</h2>
-    <p class="sub">Stand with makeup artists. Make your support count.</p>
+    <div class="content">
+      <section class="panel">
+        <h2>Add your signature</h2>
+        <p class="intro">Show your support for makeup artists and the respect their work deserves.</p>
 
-    <form id="petition-form">
-      <label for="name">Your name</label>
-      <input id="name" name="name" maxlength="70" autocomplete="name" required placeholder="Enter your name">
+        <form id="signatureForm">
+          <label for="name">Your name</label>
+          <input id="name" name="name" maxlength="60" required autocomplete="name" placeholder="Enter your name">
 
-      <label for="message">Why do you support this petition? <span style="font-weight:normal;color:#766b72">(optional)</span></label>
-      <textarea id="message" name="message" maxlength="240" placeholder="Write a short message..."></textarea>
+          <label for="message">Why do you support this petition? (optional)</label>
+          <textarea id="message" name="message" maxlength="500" placeholder="Write a short message..."></textarea>
 
-      <label class="consent">
-        <input id="consent" type="checkbox" required>
-        <span>I agree that my name and message may be displayed publicly on this petition.</span>
-      </label>
+          <label class="consent">
+            <input id="consent" type="checkbox" required>
+            <span>I agree that my name and message may be displayed publicly as part of this petition. Please don't include private information.</span>
+          </label>
 
-      <button id="submit" type="submit">Sign the petition ♥</button>
-      <p id="notice" role="status" aria-live="polite"></p>
-    </form>
-  </section>
+          <button id="submitButton" type="submit">Sign the petition</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
 
-  <aside class="card">
-    <div class="countbox">
-      <div class="count" id="count">—</div>
-      <div class="countlabel">people standing together</div>
+        <p class="small-note">Please submit only one signature per person.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Community support</h2>
+        <p class="intro">Every signature helps show that makeup artistry deserves respect.</p>
+        <div id="signatureList" class="signature-list" aria-live="polite">
+          <p class="empty">Loading signatures...</p>
+        </div>
+        <button id="refreshButton" type="button" style="margin-top:18px">Refresh signatures</button>
+      </section>
     </div>
+  </main>
 
-    <h2>What we stand for</h2>
-    <p class="sub">Every artist deserves to be taken seriously.</p>
-    <ul>
-      <li><span class="tick">✓</span><strong>Respect the skill.</strong> Artistry takes technique and practice.</li>
-      <li><span class="tick">✓</span><strong>Respect the time.</strong> Every look takes effort and care.</li>
-      <li><span class="tick">✓</span><strong>Respect the artist.</strong> Creative work deserves appreciation, not ridicule.</li>
-    </ul>
+  <footer>
+    Makeup Artists Deserve Respect · Thank you for supporting the petition.
+  </footer>
 
-    <div class="quote">Makeup is an art. The people behind it deserve respect.</div>
-    <h2>Recent signatures</h2>
-    <div id="signatures" aria-live="polite"><p class="empty">Loading signatures...</p></div>
-  </aside>
-</main>
+  <script>
+    const API_URL = "https://makeupartistrespect.onrender.com";
+    const form = document.getElementById("signatureForm");
+    const submitButton = document.getElementById("submitButton");
+    const formStatus = document.getElementById("formStatus");
+    const signatureCount = document.getElementById("signatureCount");
+    const signatureList = document.getElementById("signatureList");
+    const refreshButton = document.getElementById("refreshButton");
 
-<footer>
-  <div class="wrap"><strong>MAKEUP ARTISTS DESERVE RESPECT.</strong><br>Every signature makes a statement.</div>
-</footer>
-
-<script>
-const form = document.getElementById("petition-form");
-const nameInput = document.getElementById("name");
-const messageInput = document.getElementById("message");
-const notice = document.getElementById("notice");
-const count = document.getElementById("count");
-const signatures = document.getElementById("signatures");
-const submitButton = document.getElementById("submit");
-
-function showNotice(message, success = false) {
-  notice.textContent = message;
-  notice.style.color = success ? "#257348" : "#b4234d";
-}
-
-async function loadSignatures() {
-  try {
-    const response = await fetch("/api/signatures", {
-      cache: "no-store"
-    });
-
-    if (!response.ok) throw new Error("Request failed");
-
-    const data = await response.json();
-    count.textContent = Number(data.total || 0).toLocaleString();
-
-    signatures.replaceChildren();
-
-    if (!data.signatures || data.signatures.length === 0) {
-      const empty = document.createElement("p");
-      empty.className = "empty";
-      empty.textContent = "Be the first to sign this petition.";
-      signatures.appendChild(empty);
-      return;
+    function showStatus(message, isError = false) {
+      formStatus.textContent = message;
+      formStatus.style.color = isError ? "#b42345" : "#286c48";
     }
 
-    data.signatures.forEach(signature => {
-      const item = document.createElement("div");
-      item.className = "signature";
+    function formatDate(value) {
+      if (!value) return "";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      return date.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
+    }
 
-      const person = document.createElement("strong");
-      person.textContent = signature.name;
-      item.appendChild(person);
+    function renderSignatures(signatures) {
+      signatureList.replaceChildren();
 
-      if (signature.message) {
-        const message = document.createElement("small");
-        message.textContent = "“" + signature.message + "”";
-        item.appendChild(message);
+      if (!signatures.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "Be the first to sign the petition.";
+        signatureList.appendChild(empty);
+        return;
       }
 
-      signatures.appendChild(item);
-    });
-  } catch {
-    count.textContent = "—";
-    signatures.replaceChildren();
+      signatures.forEach(signature => {
+        const card = document.createElement("article");
+        card.className = "signature";
 
-    const error = document.createElement("p");
-    error.className = "empty";
-    error.textContent = "Unable to connect to the petition server. Please try again.";
-    signatures.appendChild(error);
-  }
-}
+        const name = document.createElement("strong");
+        name.textContent = signature.name || "Anonymous supporter";
+        card.appendChild(name);
 
-form.addEventListener("submit", async event => {
-  event.preventDefault();
+        if (signature.message) {
+          const message = document.createElement("p");
+          message.textContent = signature.message;
+          card.appendChild(message);
+        }
 
-  const name = nameInput.value.trim();
-  const message = messageInput.value.trim();
+        const dateText = formatDate(signature.date);
+        if (dateText) {
+          const time = document.createElement("time");
+          time.textContent = dateText;
+          card.appendChild(time);
+        }
 
-  if (!name) {
-    showNotice("Please enter your name.");
-    return;
-  }
-
-  if (!document.getElementById("consent").checked) {
-    showNotice("Please confirm the public display consent.");
-    return;
-  }
-
-  submitButton.disabled = true;
-  submitButton.textContent = "Submitting...";
-
-  try {
-    const response = await fetch("/api/signatures", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, message })
-    });
-
-    const data = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      showNotice(data.error || "Your signature could not be saved.");
-      return;
+        signatureList.appendChild(card);
+      });
     }
 
-    form.reset();
-    showNotice("Your signature has been saved. Thank you!", true);
-    await loadSignatures();
-  } catch {
-    showNotice("Connection failed. Please try again.");
-  } finally {
-    submitButton.disabled = false;
-    submitButton.textContent = "Sign the petition ♥";
-  }
-});
+    async function loadSignatures() {
+      try {
+        const response = await fetch(`${API_URL}/api/signatures`, {
+          method: "GET",
+          cache: "no-store"
+        });
 
-loadSignatures();
-setInterval(loadSignatures, 15000);
-</script>
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!Array.isArray(data.signatures)) {
+          throw new Error("Unexpected response from server");
+        }
+
+        signatureCount.textContent = Number(data.count ?? data.signatures.length).toLocaleString();
+        renderSignatures(data.signatures);
+      } catch (error) {
+        console.error("Could not load signatures:", error);
+        signatureCount.textContent = "—";
+        signatureList.replaceChildren();
+
+        const message = document.createElement("p");
+        message.className = "empty";
+        message.textContent = "Signatures could not be loaded right now. Please try again shortly.";
+        signatureList.appendChild(message);
+      }
+    }
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const consent = document.getElementById("consent").checked;
+
+      if (name.length < 2) {
+        showStatus("Please enter a name with at least 2 characters.", true);
+        return;
+      }
+
+      if (!consent) {
+        showStatus("Please confirm consent before signing.", true);
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+      showStatus("");
+
+      try {
+        const response = await fetch(`${API_URL}/api/signatures`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name, message })
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(data.error || `Submission failed (${response.status})`);
+        }
+
+        showStatus("Thank you — your signature has been submitted.");
+        form.reset();
+        await loadSignatures();
+      } catch (error) {
+        console.error("Could not submit signature:", error);
+        showStatus(
+          error.message.includes("Failed to fetch")
+            ? "Could not reach the server. It may be waking up; please wait a moment and try again."
+            : error.message || "Your signature could not be submitted. Please try again.",
+          true
+        );
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Sign the petition";
+      }
+    });
+
+    refreshButton.addEventListener("click", loadSignatures);
+    loadSignatures();
+  </script>
 </body>
 </html>
