@@ -14,11 +14,14 @@ DATA_FILE = Path(os.environ.get("SIGNATURES_FILE", "signatures.json"))
 MAX_BODY_SIZE = 8192
 MAX_SIGNATURES = 10000
 
+
 ALLOWED_ORIGINS = {
+    "https://makeupartistrespect.github.io",
     "https://lennycroft89-hue.github.io",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 }
+
 
 LOCK = threading.Lock()
 
